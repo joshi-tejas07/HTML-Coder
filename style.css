@@ -1,0 +1,35 @@
+
+
+body {
+  font-family: 'IBM Plex Mono', sans-serif;
+}
+[x-cloak] {
+  display: none;
+}
+
+.line {
+  background: repeating-linear-gradient(
+    to bottom,
+    #eee,
+    #eee 1px,
+    #fff 1px,
+    #fff 8%
+  );
+}
+.tick {
+  background: repeating-linear-gradient(
+    to right,
+    #eee,
+    #eee 1px,
+    #fff 1px,
+    #fff 5%
+  );
+}
+.graph-paper {
+  background-color: #ffffff;
+  background-image: linear-gradient(to right, #e5e7eb 1px, transparent 1px),
+                    linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
+  background-size: 40px 40px;
+  min-height: calc(100vh - 5.5rem);
+}
+

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safety Audit</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans h-full">
+  <header class="bg-white shadow p-1 border-b-2  border-gray-300 flex items-center">
+    <div class="flex items-center space-x-2">
+      <img src="Logo.png" alt="Logo" class="w-6 h-6">
+      <span class="text-xl font-semibold text-black-600">Safety Audit</span>
+    </div>
+    <div class="flex items-center space-x-1 ml-4">
+      <p class="text-gray-500">|</p>
+      <button class=" rounded hover:bg-gray-200"> <i class="bsc-undo"></i> </button>
+      <button class=" rounded hover:bg-gray-200"><i class="bsc-redo"></i></button>
+      <p class="text-gray-500">|</p>
+      <button class="p-2 rounded hover:bg-gray-200"><i class="bsc-cut-scissors"></i></button>
+      <button class="p-2 rounded hover:bg-gray-200"><i class="bsc-copy-duplicate-2"></i></button>
+      <button class="p-2 rounded hover:bg-gray-200"><i class="bsc-add-plus-new-square-box-square"></i></button>
+    </div>
+  </header>
+
+  <div class="flex">
+    <!-- Sidebar -->
+    <aside class="w-1/4 bg-white shadow-md p-2">
+      <h2 class="font-semibold mb-3 ml-2 mt-12">Charts</h2>
+      
+        
+        <ul class="flex flex-wrap justify-between ml-2 mr-2">
+          <li class="mb-2 hover:bg-gray-200"><i class="bsc-pie-chart"></i></li>
+          <li class="mb-2 hover:bg-gray-200"><i class="bsc-bar-chart"></i></li>
+          <li class="mb-2 hover:bg-gray-200"><i class="bsc-chart-analytics-graph"></i></li>
+          <li class="mb-2 hover:bg-gray-200"><i class="bsc-target-7"></i></li>
+          <li class="mb-2 hover:bg-gray-200"><i class="bsc-credit-card-debit-atm"></i></li>
+          <li class="mb-2 hover:bg-gray-200"><i class="bsc-comment-square-chat-message-2"></i></li>
+          <li class="mb-2 hover:bg-gray-200"><i class="bsc-paper-note-a4"></i></li>
+        </ul>
+      <div class="mt-4">
+        <h2 class="font-semibold mb-2 ml-2">Form Fields</h2>
+        <div class="mb-4 relative ml-2 mr-2">
+          <input type="text" placeholder="Search..." class="w-full p-2 pl-10 border rounded">
+          <i class="bsc-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
+      </div>
+        <ul>
+          
+          <li class="mb-2 flex items-center ml-2">
+            <i class="bsc-next-arrow-forward"></i>
+            <span class="ml-2">📄 Facility Complaints</span>
+        </li>
+          <li class="mb-2 flex items-center ml-2"><i class="bsc-next-arrow-forward"></i> <span class="ml-2">📋 Service Requests</span></li>
+          <li class="mb-2 flex items-center ml-2"><i class="bsc-arrow-down-circle"></i> <span class="ml-2">📅 Subscriptions</span> </li>
+          <li class="relative mb-3 ml-12 pl-2 border-l-3 border-gray-300">
+            <div class="absolute left-0 top-0 h-full w-0.5 bg-gray-400"></div>
+            <div class="ml-3 ">
+                <div class="mb-2 mr-1">📝 Complaint</div>
+                <div class="mb-2 mr-1">📅 Created On</div>
+                <div class="mr-1">🗓️ Date Of Execution</div>
+            </div>
+          </li>
+         
+          <li class="mb-2 flex items-center ml-2"><i class="bsc-arrow-down-circle"></i> <span class="ml-2">📁 Project</span></li>
+          <li class="relative mb-3 ml-12 pl-2 border-l-3 border-gray-300">
+            <div class="absolute left-0 top-0 h-full w-0.5 bg-gray-400"></div>
+            <div class="ml-3">
+                <div class="mb-2">📝 Complaint</div>
+                <div class="inline-block mb-2 bg-blue-200 rounded border border-blue-500 p-1 w-30"><p>📅 Created On</p></div>
+                <div>🗓️ Date Of Execution</div>
+            </div>
+          </li>
+          <li class="mb-2 flex items-center ml-2"><i class="bsc-arrow-down-circle"></i> <span class="ml-2">📜 Contracts</span></li>
+          <li class="relative ml-12 pl-2 border-l-3 border-gray-300">
+            <div class="absolute left-0 top-0 h-full w-0.5 bg-gray-400"></div>
+            <div class="ml-3">
+                <div class="mb-2">📝 Complaint</div>
+                <div class="mb-2">📅 Created On</div>
+                <div>🗓️ Date Of Execution</div>
+            </div>
+        </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="graph-paper w-1/2   p-1">
+      <div class="p-4 items-center bg-white m-4  mb-0 border border-gray-100 ">
+        <h1 class="text-2xl font-bold mb-4">Monthly Report</h1>
+        <div class=" grid grid-cols-2 gap-4 ">
+          <div class=" bg-white w-auto h-80  shadow rounded p-2 border border-gray-400 m-2">
+              <div class="flex justify-between">
+                <img src="filter.png" alt="" class="h-5 w-5">
+                <i class="bsc-more-horizontal"></i>
+              </div>
+              <!-- Chart Placeholder --> 
+              <h2 class=" text-lg font-semibold mb-2">Work Orders by Status</h2>
+            <div class="flex h-full w-full p-1">
+                <svg viewBox="0 0 90 120" class="w-auto h-auto">
+                    <!-- Y-axis horizontal lines -->
+                    <line x1="10" y1="10" x2="100" y2="10" stroke="#ccc" stroke-width="0.5"/>
+                    <line x1="10" y1="20" x2="100" y2="20" stroke="#ccc" stroke-width="0.5"/>
+                    <line x1="10" y1="30" x2="100" y2="30" stroke="#ccc" stroke-width="0.5"/>
+                    <line x1="10" y1="40" x2="100" y2="40" stroke="#ccc" stroke-width="0.5"/>
+                    <line x1="10" y1="50" x2="100" y2="50" stroke="#ccc" stroke-width="0.5"/>
+                    <line x1="10" y1="60" x2="100" y2="60" stroke="#ccc" stroke-width="0.5"/>
+
+                    <!-- Bars -->
+                    <rect x="15" y="40" width="10" height="20" fill="rgb(123,104,238)"/>
+                    <rect x="35" y="51" width="10" height="9" fill="rgb(123,104,238)"/>
+                    <rect x="55" y="20" width="10" height="40" fill="rgb(123,104,238)"/>
+                    <rect x="75" y="41" width="10" height="19" fill="rgb(123,104,238)"/>
+
+                    <!-- X-axis labels -->
+                    <text x="12" y="60" transform="rotate(-55 20,55)" font-size="3" text-anchor="end">Demo D...</text>
+                    <text x="32" y="60" transform="rotate(-55 40,55)" font-size="3" text-anchor="end">Did Not J...</text>
+                    <text x="52" y="60" transform="rotate(-55 60,55)" font-size="3" text-anchor="end">Did Not Re...</text>
+                    <text x="72" y="60" transform="rotate(-55 80,55)" font-size="3" text-anchor="end">In follow...</text>
+
+                    <!-- Y-axis labels -->
+                    <text x="10" y="10" font-size="3" text-anchor="end">400</text>
+                    <text x="10" y="20" font-size="3" text-anchor="end">320</text>
+                    <text x="10" y="30" font-size="3" text-anchor="end">240</text>
+                    <text x="10" y="40" font-size="3" text-anchor="end">160</text>
+                    <text x="10" y="50" font-size="3" text-anchor="end">80</text>
+                    <text x="10" y="60" font-size="3" text-anchor="end">0</text>
+                </svg>
+            </div>
+            
+            
+          </div>
+          <div class="bg-white  w-auto h-80 shadow rounded p-2 border-2 border-blue-500 m-2 ">
+            <div class="flex justify-between">
+              <img src="filter.png" alt="" class="h-5 w-5">
+              <i class="bsc-more-horizontal"></i>
+            </div>
+            <h2 class="text-lg font-semibold mb-2 ">Service Requests</h2>
+            <div class="flex  h-full w-full p-1">
+              <svg viewBox="0 0 90 120" class="w-auto h-auto">
+                  <!-- Y-axis horizontal lines -->
+                  <line x1="10" y1="10" x2="100" y2="10" stroke="#ccc" stroke-width="0.5"/>
+                  <line x1="10" y1="20" x2="100" y2="20" stroke="#ccc" stroke-width="0.5"/>
+                  <line x1="10" y1="30" x2="100" y2="30" stroke="#ccc" stroke-width="0.5"/>
+                  <line x1="10" y1="40" x2="100" y2="40" stroke="#ccc" stroke-width="0.5"/>
+                  <line x1="10" y1="50" x2="100" y2="50" stroke="#ccc" stroke-width="0.5"/>
+                  <line x1="10" y1="60" x2="100" y2="60" stroke="#ccc" stroke-width="0.5"/>
+      
+                  <!-- Bars -->
+                  <rect x="15" y="40" width="10" height="20" fill="rgb(123,104,238)"/>
+                  <rect x="35" y="51" width="10" height="9" fill="rgb(123,104,238)"/>
+                  <rect x="55" y="20" width="10" height="40" fill="rgb(123,104,238)"/>
+                  <rect x="75" y="41" width="10" height="19" fill="rgb(123,104,238)"/>
+      
+                  <!-- X-axis labels -->
+                  <text x="12" y="60" transform="rotate(-55 20,55)" font-size="3" text-anchor="end">Demo D...</text>
+                  <text x="32" y="60" transform="rotate(-55 40,55)" font-size="3" text-anchor="end">Did Not J...</text>
+                  <text x="52" y="60" transform="rotate(-55 60,55)" font-size="3" text-anchor="end">Did Not Re...</text>
+                  <text x="72" y="60" transform="rotate(-55 80,55)" font-size="3" text-anchor="end">In follow...</text>
+      
+                  <!-- Y-axis labels -->
+                  <text x="10" y="10" font-size="3" text-anchor="end">400</text>
+                  <text x="10" y="20" font-size="3" text-anchor="end">320</text>
+                  <text x="10" y="30" font-size="3" text-anchor="end">240</text>
+                  <text x="10" y="40" font-size="3" text-anchor="end">160</text>
+                  <text x="10" y="50" font-size="3" text-anchor="end">80</text>
+                  <text x="10" y="60" font-size="3" text-anchor="end">0</text>
+              </svg>
+          </div>
+                  
+          </div>
+          <div class="bg-white  w-auto h-80 shadow rounded p-2 border border-gray-400 m-2">
+            <div class="flex space-x-1 flex-wrap mb-1">
+              <img src="filter.png" alt="" class="h-5 w-5 mt-1">
+              
+              <!-- Region Dropdown -->
+              <div class="flex">
+                <button id="dropdownButton" class="flex items-center space-x-1/2 p-1/2  focus:outline-none border border-gray-400 bg-gray-100 rounded w-15  m-1">
+                    <span class="text-sm font-semibold">Region</span>
+                    <svg class="w-5 h-5 fill-current text-gray-600" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10 13l-5-5 1.5-1.5L10 10l3.5-3.5L16 8l-6 6z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div id="dropdownMenu" class=" absolute  mt-8 w-1/4 bg-white shadow-lg rounded-md overflow-hidden z-10 invisible">
+                    <div class="p-2">
+                        <!-- Search bar -->
+                        <div class="mb-4 relative">
+                          <input type="text" placeholder="Search..." class="w-full p-2 pl-10 border rounded">
+                          <i class="bsc-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-300"></i>
+                      </div>
+                        <!-- Region with checkboxes -->
+                        <div class="overflow-y-auto max-h-48">
+                          <div class="flex items-center mb-2">
+                              <input type="checkbox" id="country1" class="mr-2">
+                              <label for="country1" class="font-semibold" >Africa</label>
+                          </div>
+                          <div class="flex items-center mb-2">
+                              <input type="checkbox" id="country2" class="mr-2">
+                              <label for="country2" class="font-semibold">Asia</label>
+                          </div>
+                          <div class="flex items-center mb-2">
+                              <input type="checkbox" id="country3" class="mr-2">
+                              <label for="country3" class="font-semibold">Central America</label>
+                          </div>
+                          <div class="flex items-center mb-2">
+                              <input type="checkbox" id="country4" class="mr-2">
+                              <label for="country4" class="font-semibold">Europe</label>
+                          </div>
+                          <div class="flex items-center mb-2">
+                              <input type="checkbox" id="country5" class="mr-2">
+                              <label for="country5" class="font-semibold">Middle East</label>
+                          </div>
+                          <div class="flex items-center mb-2">
+                              <input type="checkbox" id="country6" class="mr-2">
+                              <label for="country6" class="font-semibold">North America</label>
+                          </div>
+                          <div class="flex items-center mb-2">
+                              <input type="checkbox" id="country7" class="mr-2">
+                              <label for="country7" class="font-semibold">South America</label>
+                          </div>
+                          <div class="flex items-center mb-2">
+                              <input type="checkbox" id="country8" class="mr-2">
+                              <label for="country8" class="font-semibold">Pacific</label>
+                          </div>
+                          <!-- Add more countries as needed -->
+                      </div>
+                    </div>
+                    <!-- Buttons -->
+                    <div class="flex justify-between p-2 m-1">
+                        <button class="text-gray-700 font-semibold">Select All</button>
+                        <button class="text-gray-700 font-semibold">Clear All</button>
+                        <button class="text-gray-700 font-bold">Done</button>
+                    </div>
+                </div>
+            </div>
+
+              <!-- Country Dropdown -->
+              <div class="flex">
+                <button id="dropdownButton1" class="flex items-center space-x-1/2 p-1/2 focus:outline-none border border-gray-400 bg-gray-100 rounded w-15 m-1">
+                    <span class="text-sm font-semibold">Country</span>
+                    <svg class="w-5 h-5 fill-current text-gray-600" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10 13l-5-5 1.5-1.5L10 10l3.5-3.5L16 8l-6 6z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div id="dropdownMenu1" class=" absolute  mt-8 w-1/5 bg-white shadow-lg rounded-md overflow-hidden z-10 invisible">
+                    <div class="p-2">
+                        <!-- Search bar -->
+                        <div class="mb-4 relative">
+                          <input type="text" placeholder="Search..." class="w-full p-2 pl-10 border rounded">
+                          <i class="bsc-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-300"></i>
+                      </div>
+                        <!-- Countries with checkboxes -->
+                        <div class="overflow-y-auto max-h-48">
+                          <div class="flex items-center mb-2">
+                              <input type="checkbox" id="country1" class="mr-2">
+                              <label for="country1" class="font-semibold">Angola</label>
+                          </div>
+                          <div class="flex items-center mb-2">
+                              <input type="checkbox" id="country2" class="mr-2">
+                              <label for="country2" class="font-semibold">United States Of America</label>
+                          </div>
+                          <div class="flex items-center mb-2">
+                              <input type="checkbox" id="country3" class="mr-2">
+                              <label for="country3" class="font-semibold">India</label>
+                          </div>
+                          <div class="flex items-center mb-2">
+                              <input type="checkbox" id="country4" class="mr-2">
+                              <label for="country4" class="font-semibold">United Kingdom</label>
+                          </div>
+                          <div class="flex items-center mb-2">
+                              <input type="checkbox" id="country5" class="mr-2">
+                              <label for="country5" class="font-semibold">Cyprus</label>
+                          </div>
+                          <div class="flex items-center mb-2">
+                              <input type="checkbox" id="country6" class="mr-2">
+                              <label for="country6" class="font-semibold">Japan</label>
+                          </div>
+                          <div class="flex items-center mb-2">
+                              <input type="checkbox" id="country7" class="mr-2">
+                              <label for="country7" class="font-semibold">Russia</label>
+                          </div>
+                          <div class="flex items-center mb-2">
+                              <input type="checkbox" id="country8" class="mr-2">
+                              <label for="country8" class="font-semibold">South Africa</label>
+                          </div>
+                          <!-- Add more countries as needed -->
+                      </div>
+                    </div>
+                    <!-- Buttons -->
+                    <div class="flex justify-between p-2 bg-gray-100">
+                        <button class="text-gray-700 font-semibold">Select All</button>
+                        <button class="text-gray-700 font-semibold">Clear All</button>
+                        <button class="text-gray-700 font-bold">Done</button>
+                    </div>
+                </div>
+            </div>
+              
+
+
+            </div>
+            <h2 class="text-lg font-semibold mb-2 ">Status</h2>
+            <div class="flex h-full w-full p-1">
+              <svg viewBox="0 0 90 120" class="w-auto h-auto">
+                  <!-- Y-axis horizontal lines -->
+                  <line x1="10" y1="10" x2="100" y2="10" stroke="#ccc" stroke-width="0.5"/>
+                  <line x1="10" y1="20" x2="100" y2="20" stroke="#ccc" stroke-width="0.5"/>
+                  <line x1="10" y1="30" x2="100" y2="30" stroke="#ccc" stroke-width="0.5"/>
+                  <line x1="10" y1="40" x2="100" y2="40" stroke="#ccc" stroke-width="0.5"/>
+                  <line x1="10" y1="50" x2="100" y2="50" stroke="#ccc" stroke-width="0.5"/>
+                  <line x1="10" y1="60" x2="100" y2="60" stroke="#ccc" stroke-width="0.5"/>
+      
+                  <!-- Bars -->
+                  <rect x="15" y="40" width="10" height="20" fill="rgb(123,104,238)"/>
+                  <rect x="35" y="51" width="10" height="9" fill="rgb(123,104,238)"/>
+                  <rect x="55" y="20" width="10" height="40" fill="rgb(123,104,238)"/>
+                  <rect x="75" y="41" width="10" height="19" fill="rgb(123,104,238)"/>
+      
+                  <!-- X-axis labels -->
+                  <text x="12" y="60" transform="rotate(-55 20,55)" font-size="3" text-anchor="end">Demo D...</text>
+                  <text x="32" y="60" transform="rotate(-55 40,55)" font-size="3" text-anchor="end">Did Not J...</text>
+                  <text x="52" y="60" transform="rotate(-55 60,55)" font-size="3" text-anchor="end">Did Not Re...</text>
+                  <text x="72" y="60" transform="rotate(-55 80,55)" font-size="3" text-anchor="end">In follow...</text>
+      
+                  <!-- Y-axis labels -->
+                  <text x="10" y="10" font-size="3" text-anchor="end">400</text>
+                  <text x="10" y="20" font-size="3" text-anchor="end">320</text>
+                  <text x="10" y="30" font-size="3" text-anchor="end">240</text>
+                  <text x="10" y="40" font-size="3" text-anchor="end">160</text>
+                  <text x="10" y="50" font-size="3" text-anchor="end">80</text>
+                  <text x="10" y="60" font-size="3" text-anchor="end">0</text>
+              </svg>
+          </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class=" bg-white shadow rounded">
+        <div class="flex  flex-wrap">
+          <div class=" flex border-r-2  border-gray-400">
+            <img src="image12.png" alt="" class="h-3 w-3 mt-1.5 mr-1">
+            <p class="mr-2">Monthly Sales Report </p>
+            <i class="bsc-more-horizontal"></i>
+
+          </div>
+          <div class=" flex border-r-2  border-gray-400">
+            <img src="image12.png" alt="" class="h-3 w-3 mt-1.5 mr-1">
+            <p class="mr-2">Untitled Page </p>
+            <i class="bsc-more-horizontal"></i>
+
+          </div>
+          <div class=" flex border-r-2  border-gray-400">
+            <img src="image12.png" alt="" class="h-3 w-3 mt-1.5 mr-1">
+            <p class="mr-2">Untitled Page </p>
+            <i class="bsc-more-horizontal"></i>
+
+          </div>
+
+          <div class="m-1">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 7V12M12 12V17M12 12H7M12 12H17M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+         
+          
+        </div>
+      </div>
+    </main>
+
+    <!-- Form Settings Panel -->
+    <aside class="w-1/4 bg-gray-100 shadow-md p-4">
+      <ul class="flex  space-x-4 m-1 mb-2">
+        <div class="border-b-2  border-purple-800 w-10">
+          <li class="ml-2 "><img src="setting.png" alt="" class="h-5 w-5"></li>
+        </div>
+        
+        <li class="mb-2"><img src="message.png" alt="" class="h-5 w-5"></li>
+        <li class="mb-2"><img src="timer.png" alt="" class="h-5 w-5"></li>
+        
+      </ul>
+      <h2 class="flex font-semibold mb-4 ml-1 "><i class="bsc-paper-note-a4 mr-2"></i>Form Settings</h2>
+      <div class="bg-white rounded p-2 ">
+        <div class="mb-4">
+          <label class="block font-bold m-1">Name</label>
+          <input type="text" class="w-full p-2 border rounded">
+        </div>
+        <div class="mb-4">
+          <label class="block font-bold m-1">Description</label>
+          <input type="text" class="w-full p-2 border rounded">
+        </div>
+      </div>
+      
+      <div class="flex justify-center mt-4">
+        <button class="flex items-center justify-center w-32 p-2 bg-gradient-to-r from-purple-800 to-blue-500 text-white rounded">
+          <img src="image.png" alt="" class="w-4 h-4 m-1">
+            <span class="m-1">Design</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 12H21M21 12L14 5M21 12L14 19" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+        </button>
+    </div>
+      </aside>
+  </div>
+
+  <script>
+    const dropdownButton = document.getElementById('dropdownButton');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+
+    dropdownButton.addEventListener('click', () => {
+        dropdownMenu.classList.toggle('invisible');
+    });
+    const dropdownButton1 = document.getElementById('dropdownButton1');
+    const dropdownMenu1 = document.getElementById('dropdownMenu1');
+
+    dropdownButton1.addEventListener('click', () => {
+        dropdownMenu1.classList.toggle('invisible');
+    });
+</script>
+  <script async src="https://basicons.xyz/embed.js"> </script>
+</body>
+</html>
